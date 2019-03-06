@@ -27,14 +27,14 @@ class StringTransformer {
     }
 
     static String individualize(String str) {
-        StringBuilder code = new StringBuilder();
+        String code = "";
         int i = 0;
         while (i<str.length()) {
             if ( str.indexOf( str.charAt(i) ) ==  str.lastIndexOf( str.charAt(i) ) ) {
-                code.append(str.charAt(i));
+                code += str.charAt(i);
             }
             i++;
         }
-        return code.toString();
+        return code;
     }
 }
