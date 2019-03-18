@@ -1,12 +1,12 @@
 package com.group1;
 
 class Book {
-    private int ID;
-    private String name;
-    private String author;
-    private String publishingHouse;
-    private int year;
-    private int pages;
+    private final int ID;
+    private final String name;
+    private final String author;
+    private final String publishingHouse;
+    private final int year;
+    private final int pages;
     private double price;
 
     Book(int ID, String name, String author,

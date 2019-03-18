@@ -2,7 +2,7 @@ package com.group1;
 
 import java.util.Scanner;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of books array");
@@ -21,7 +21,7 @@ public class Main {
         int year = sc.nextInt();
         (books.laterThan(year)).allBooks();
         System.out.println("Enter an author to search");
-        String author = sc.nextLine();
+        String author = sc.next();
         (books.searchByAuthor(author)).allBooks();
     }
 }

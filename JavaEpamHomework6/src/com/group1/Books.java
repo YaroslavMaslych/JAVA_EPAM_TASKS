@@ -1,6 +1,6 @@
 package com.group1;
 
-public class Books {
+class Books {
     private int index = 0;
     private Book[] books;
 
