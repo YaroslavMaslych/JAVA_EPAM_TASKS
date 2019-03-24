@@ -42,11 +42,11 @@ public class Model {
     }
 
     public String allBooks() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < books.getIndex(); i++) {
-            result += view(books.getBooks()[i]) + "\n";
+            result.append(view(books.getBooks()[i])).append("\n");
         }
-        return result;
+        return result.toString();
     }
 
     public void changePrice(int percent) {
@@ -56,23 +56,23 @@ public class Model {
     }
 
     public String findByAuthor(String author) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < books.getIndex(); i++) {
             String author2 = books.getBooks()[i].getAuthor();
             if (author2.equals(author)) {
-                result = result + view(books.getBooks()[i]) + "\n";
+                result.append(view(books.getBooks()[i])).append("\n");
             }
         }
-        return result;
+        return result.toString();
     }
 
     public String findByYear(int year) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < books.getIndex(); i++) {
             if (books.getBooks()[i].getYear() >= year) {
-                result += view(books.getBooks()[i]) + "\n";
+                result.append(view(books.getBooks()[i])).append("\n");
             }
         }
-        return result;
+        return result.toString();
     }
 }

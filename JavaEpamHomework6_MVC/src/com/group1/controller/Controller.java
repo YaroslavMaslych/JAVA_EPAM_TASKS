@@ -6,9 +6,9 @@ import com.group1.view.View;
 import java.util.Scanner;
 
 public class Controller {
-    private Model model;
-    private View view;
-    private Scanner sc;
+    private final Model model;
+    private final View view;
+    private final Scanner sc;
 
     public Controller() {
         this.model = new Model();
@@ -16,7 +16,7 @@ public class Controller {
         this.sc = new Scanner(System.in);
     }
 
-    int getInt() {
+    private int getInt() {
         try {
             String integ = sc.nextLine();
             int integers = Integer.parseInt(integ);
@@ -31,22 +31,21 @@ public class Controller {
         }
     }
 
-    String getStr() {
+    private String getStr() {
         return sc.nextLine();
     }
 
-    double getDoub() {
+    private double getDoub() {
         try {
             String doub = sc.nextLine();
-            double doubles = Double.parseDouble(doub);
-            return doubles;
+            return Double.parseDouble(doub);
         } catch (Exception e) {
             view.printMessage(View.WRONG_INPUT_DATA);
             return getDoub();
         }
     }
 
-    void control(String command) {
+    private void control(String command) {
         switch (command) {
             case "ADD": {
                 view.printMessage(View.INPUT_NAME);
